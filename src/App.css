@@ -1,0 +1,874 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  border-radius: 15px 15px 0 0 !important;
+  padding: 1.2rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.form-label {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.map-placeholder {
+  min-height: 200px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+}
+
+.lv-feeder-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lv-feeder-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.lv-feeder-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.lv-feeder-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .display-5 {
+    font-size: 1.8rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .lv-feeder-list {
+    max-height: 350px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding: 0.5rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease;
+}
+
+@media print {
+  .navbar,
+  footer,
+  .btn {
+    display: none;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+} */
+ /* Import Kohinoor Font */
+/* Import Kohinoor Devanagari Font */
+/* Import Kohinoor Devanagari Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans Devanagari', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #2d3748;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  background: rgba(33, 37, 41, 0.95) !important;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff !important;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.4s ease;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+  border-radius: 20px 20px 0 0 !important;
+  padding: 1.3rem 1.5rem;
+  font-weight: 600;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  border-bottom: 3px solid #667eea;
+  color: #ffffff !important;
+}
+
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+  color: #ffffff !important;
+  margin: 0;
+}
+
+.card-header.bg-dark {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+  color: #ffffff !important;
+}
+
+.card-header.bg-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
+  color: #ffffff !important;
+}
+
+.card-header.bg-success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%) !important;
+  color: #ffffff !important;
+}
+
+.card-body {
+  padding: 2rem;
+  background: #ffffff;
+}
+
+/* Form Elements */
+.form-label {
+  color: #2d3748;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.95rem;
+  background: #f8fafc;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.3);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.form-control::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+/* Input Group Styling */
+.input-group .btn {
+  border-radius: 0 10px 10px 0;
+  border: 2px solid #667eea;
+  border-left: none;
+}
+
+.input-group .form-control {
+  border-radius: 10px 0 0 10px;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+  min-height: 250px;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed #cbd5e0;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.map-placeholder:hover {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+}
+
+/* LV Feeder List Scrollbar */
+.lv-feeder-list {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.lv-feeder-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.lv-feeder-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+.lv-feeder-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+}
+
+.lv-feeder-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 10px;
+  padding: 0.75rem 1.8rem;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  box-shadow: 0 5px 20px rgba(72, 187, 120, 0.4);
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.6);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-outline-primary {
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: #667eea;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: #ffffff;
+}
+
+.btn-info:hover {
+  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+  transform: translateY(-3px);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  color: #ffffff;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #dd6b20 0%, #c05621 100%);
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  background: #ffffff;
+  color: #2d3748;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+  color: #ffffff;
+}
+
+.btn-outline-secondary {
+  border: 2px solid #718096;
+  color: #718096;
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Table Styling */
+.table {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.table thead th {
+  background: #f7fafc;
+  color: #2d3748;
+  font-weight: 600;
+  border-bottom: 2px solid #667eea;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.table-hover tbody tr:hover {
+  background: #f7fafc;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  border-bottom: 3px solid #667eea;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+}
+
+.modal-header .btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 12px;
+  border: none;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #bee3f8 0%, #90cdf4 100%);
+  color: #1a365d;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  color: #742a2a;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+  color: #22543d;
+}
+
+/* Spinner Styling */
+.spinner-border {
+  border-width: 3px;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: auto;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.display-5 {
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+/* Small text */
+small {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.85rem;
+}
+
+.text-muted {
+  color: #718096 !important;
+}
+
+/* LV Feeder Cards */
+.lv-feeder-list .border {
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.lv-feeder-list .border:hover {
+  border-color: #667eea !important;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
+  transform: translateX(5px);
+}
+
+.lv-feeder-list .bg-light {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+}
+
+.lv-feeder-list .text-primary {
+  color: #667eea !important;
+  font-weight: 700;
+}
+
+/* Statistics Cards */
+.bg-primary {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%) !important;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%) !important;
+}
+
+.bg-info {
+  background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%) !important;
+}
+
+.bg-warning {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%) !important;
+}
+
+.bg-light {
+  background: #f7fafc !important;
+}
+
+/* Text Colors */
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-primary {
+  color: #667eea !important;
+}
+
+.text-success {
+  color: #48bb78 !important;
+}
+
+.text-danger {
+  color: #f56565 !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.6s ease;
+}
+
+.col-lg-6:first-child .card {
+  animation: slideInLeft 0.8s ease;
+}
+
+.col-lg-6:last-child .card {
+  animation: slideInRight 0.8s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .display-5 {
+    font-size: 1.8rem;
+  }
+
+  .card-body {
+    padding: 1.2rem;
+  }
+
+  .lv-feeder-list {
+    max-height: 350px !important;
+  }
+
+  .btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding: 0.5rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+    border-radius: 15px;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .card-header {
+    padding: 1rem;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  footer,
+  .btn {
+    display: none;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 2px solid #000;
+    page-break-inside: avoid;
+  }
+
+  body {
+    background: white;
+  }
+
+  .card-header {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+  }
+}
+
+/* Loading State */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: #667eea;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #667eea;
+  color: #ffffff;
+}
+
+/* Force White Text in All Card Headers */
+.card-header,
+.card-header *,
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6,
+.card-header p,
+.card-header span {
+  color: #ffffff !important;
+}
+
+/* Table Responsive */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+/* Force White Text in Card Headers - CRITICAL FIX */
+.card-header {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+}
+
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6,
+.card-header p,
+.card-header span,
+.card-header * {
+  color: #ffffff !important;
+}
+
+/* Specific fix for bg-dark class */
+.bg-dark {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+}
+
+.bg-dark.card-header {
+  color: #ffffff !important;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6 {
+  color: #ffffff !important;
+}
+
+/* Text white utility class */
+.text-white,
+.text-white * {
+  color: #ffffff !important;
+}
